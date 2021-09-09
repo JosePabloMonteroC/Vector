@@ -24,14 +24,15 @@ Vector initVector(size_t size){
 
 Vector setVector(Vector element, size_t index, float value)
 {
-    Vector myVector;
+    element->elements = realloc(element->elements, sizeof(float));
+    element->n_elements = index;
+    
+   if(spaceValidation(element, index)== 1){
+        element->elements[index] = value;
 
-    if(spaceValidation(element, index)){
-        myVector->elements[index] = value;
-
-         return myVector;
+         return element;
     }
-    else return NULL;  
+    else return NULL;
    
 }
 

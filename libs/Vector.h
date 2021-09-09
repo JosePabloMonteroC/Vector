@@ -30,7 +30,6 @@ Vector setVector(Vector element, size_t index, float value);
 Vector freeVector(Vector object);
 
 
-
 void printArray(size_t n, int array[]);
 
 

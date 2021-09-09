@@ -6,6 +6,8 @@
 
 
 #define START 0
+#define INDEX 3
+#define VECTOR 3
 #define DELTA 0.00005
 
 void setUp(void)
@@ -31,21 +33,23 @@ void test_setVector(void)
 {
  puts("Testing Vector Set function");
  Vector test_number = NULL; 
- size_t index;
- float* element;
 
- test_number = initVector(START);
- 
- test_number = setVector(test_number, index, *element);
+ size_t index = 0;
+ float* element = 0;
+
+ test_number = initVector(START);  
+  
+ test_number = setVector(test_number, INDEX, VECTOR);
 
  //TEST CODE
  
  element = test_number->elements;
  index = test_number->n_elements;
 
-
  //TEST CODE
- TEST_ASSERT_FLOAT_WITHIN(DELTA, *element, index);
+ //TEST_ASSERT_FLOAT_WITHIN(DELTA, VECTOR, *element);
+ TEST_ASSERT_EQUAL(VECTOR, element);
+
  freeVector(test_number);
 }
 
