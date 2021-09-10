@@ -36,13 +36,6 @@ Vector setVector(Vector element, size_t index, float value)
    
 }
 
-/**
-void printArray(size_t n, int array[n]){
-    for(int index = 0; index <=n; index++)
-    {
-        printf("Memory: %ld, index: %zu element %d\n",&array[index], index, array[index]);
-    }
-}*/
 
 Vector freeVector(Vector object)
 {
@@ -52,25 +45,3 @@ Vector freeVector(Vector object)
     return object;
 
 }
-
-//MAIN
-
-/** 
-#include <stdio.h>
-
-#include "Vector.h"
-
-int main()
-{
-    Vector dynamicVector = NULL;
-    
-    dynamicVector = initVector(SIZE);
-
-    
-    printArray(dynamicVector->n_elements, dynamicVector->elements);
-  
-    printf("Hello World");
-
-    return 0;
-}
-*/
